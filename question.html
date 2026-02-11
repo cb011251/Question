@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Valentine Question 💘</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container question-page">
+
+    <h1>Will You Be My Valentine? 💘</h1>
+    <p class="dare-text">Try saying no… I dare you 😌</p>
+
+    <!-- Girl Image under question -->
+    <img src="Images/cutegirl.png" alt="cute-girl" class="girl-pic">
+
+    <button class="yes" onclick="goToLove()">YESSS 💖</button>
+    <button class="no" onmouseover="moveButton()">No 🙄</button>
+
+</div>
+
+<script>
+    function moveButton() {
+        const button = document.querySelector(".no");
+        const x = Math.random() * (window.innerWidth - button.offsetWidth);
+        const y = Math.random() * (window.innerHeight - button.offsetHeight - 100); // leave space for girl pic
+        button.style.position = "absolute";
+        button.style.left = x + "px";
+        button.style.top = y + "px";
+    }
+
+    function goToLove() {
+        window.location.href = "love.html";
+    }
+</script>
+
+</body>
+</html>
